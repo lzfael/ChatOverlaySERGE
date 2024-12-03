@@ -47,7 +47,7 @@ body {
 
 /* Cabeçalho do nome do usuário */
 .chat-header {
-    background-color: #3E863D; /* Cor verde */
+  background-image: url('https://cdn.streamlabs.com/users/16409556/library/CHAT%20UP.png');
     color: #FFF; /* Texto branco */
     font-size: 1.2em;
     font-weight: bold;
