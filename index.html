@@ -13,17 +13,15 @@
 
   <!-- chat item -->
   <script type="text/template" id="chatlist_item">
-    <div data-from="{from}" data-id="{messageId}">
-      <span class="meta" style="color: {color}">
-        <span class="badges">
-        </span>
-        <span class="name">{from}</span>
-      </span>
-
-      <span class="message">
-        {message}
-      </span>
+    <div class="chat-item" data-from="{from}" data-id="{messageId}">
+      <div class="chat-header">
+        <span class="username">{from}</span>
+      </div>
+      <div class="chat-message">
+        <span>{message}</span>
+      </div>
     </div>
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
