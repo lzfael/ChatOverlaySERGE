@@ -62,16 +62,17 @@ body {
   align-items: center; /* Centraliza verticalmente */
 }
 .chat-message {
-    background: linear-gradient(to bottom, #000000, #101010); /* Gradiente de preto para cinza sutil */
-    color: #FFF; /* Cor do texto branca */
-    padding: 15px; /* Espaçamento interno */
-    font-size: 18px; /* Tamanho do texto */
-    position: relative; /* Necessário para o pseudo-elemento */
-    border: 2px solid #414141; /* Borda cinza sólida */
-    margin-bottom: 10px; /* Espaço entre mensagens */
-    width: 100%; /* Tamanho ajustado */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+  background: linear-gradient(to bottom, #000000, #101010); /* Gradiente de preto para cinza sutil */
+  color: #FFF; /* Cor do texto branca */
+  padding: 15px; /* Espaçamento interno */
+  font-size: 18px; /* Tamanho do texto */
+  position: relative; /* Necessário para o pseudo-elemento */
+  border: 2px solid #414141; /* Borda cinza sólida */
+  margin-bottom: 10px; /* Espaço entre mensagens */
+  width: 80%; /* Ajuste a largura do retângulo aqui */
+  max-width: 550px; /* Limita a largura máxima */
+  margin-left: -1; 
+  margin-right: auto; 
 }
 
 /* Animação de entrada e saída */
