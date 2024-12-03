@@ -69,12 +69,11 @@ body {
   position: relative; /* Necessário para o pseudo-elemento */
   border: 2px solid #414141; /* Borda cinza sólida */
   margin-bottom: 10px; /* Espaço entre mensagens */
-  width: 80%; /* Ajuste a largura do retângulo aqui */
-  max-width: 550px; /* Limita a largura máxima */
-  margin-left: -1; 
-  margin-right: auto; 
+  width: 70%; /* Ajuste reduzido para 70% */
+  max-width: 450px; /* Limita a largura máxima a 450px */
+  margin-left: -1; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
 }
-
 /* Animação de entrada e saída */
 @keyframes fadeInRight {
     from {
