@@ -47,14 +47,19 @@ body {
 
 /* Cabeçalho do nome do usuário */
 .chat-header {
-  background-image: url('https://cdn.streamlabs.com/users/16409556/library/CHAT%20UP.png');
-    color: #FFF; /* Texto branco */
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 5px 10px;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%); /* Recorte para simular tinta */
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
-    margin-bottom: 5px;
+  background-image: url('https://cdn.streamlabs.com/users/16409556/library/CHAT%20UP.png'); /* Imagem do fundo */
+  background-size: contain; /* Ajusta a imagem ao conteúdo */
+  background-repeat: no-repeat; /* Evita repetir a imagem */
+  color: #FFF; /* Texto branco */
+  width: 300px; /* Largura do header */
+  height: 50px; /* Altura do header */
+  position: relative; /* Posicionamento relativo para ajustes */
+  z-index: 2; /* Faz o header ficar acima do retângulo preto */
+  margin-bottom: -15px; /* Move o header para sobrepor o retângulo preto */
+  margin-left: -3px; /* Move levemente para a esquerda */
+  padding-left: 10px; /* Adiciona espaço para o texto */
+  display: flex; /* Para alinhar texto dentro */
+  align-items: center; /* Centraliza verticalmente */
 }
 
 /* Mensagem do usuário */
