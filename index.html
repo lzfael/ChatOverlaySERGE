@@ -9,24 +9,55 @@
 </head>
 
 <body>
-    <!-- item will be appened to this layout -->
-    <div id="log" class="sl__chat__layout"></div>
-
-    <!-- chat item -->
-    <script type="text/template" id="chatlist_item">
-  <div data-from="{from}" data-id="{messageId}">
-    <div class="meta" style="background-color: {color};">
-      <span class="badges"></span>
-      <span class="name">{from}</span>
-    </div>
-
-    <div class="message">
-      <div class="container-message">
-        {message}
+  <!--
+      <div id="log" class="sl__chat__layout"></div>
+      <script type="text/template" id="chatlist_item">
+    <div data-from="{from}" data-id="{messageId}">
+      <div class="meta" style="background-color: {color};">
+        <span class="badges"></span>
+        <span class="name">{from}</span>
+      </div>
+  
+      <div class="message">
+        <div class="container-message">
+          {message}
+        </div>
       </div>
     </div>
-  </div>
-</script>
+  </script>
+-->
+<body>
+    <div id="chat-overlay"></div>
+
+    <script>
+      const chatOverlay = document.getElementById('chat-overlay');
+  
+      function addMessage(username, message, bgImage) {
+        const msg = document.createElement('div');
+        msg.className = 'chat-message';
+        msg.style.backgroundImage = url('${bgImage}');
+  
+        msg.innerHTML = `
+          <div class="username">${username}</div>
+          <div class="text">${message}</div>
+        `;
+  
+        chatOverlay.appendChild(msg);
+  
+        // Remove mensagens antigas para evitar sobrecarga
+        if (chatOverlay.children.length > 10) {
+          chatOverlay.removeChild(chatOverlay.firstChild);
+        }
+      }
+      // Simular mensagens com um endereço de imagem
+      setInterval(() => {
+        addMessage(
+          'User' + Math.floor(Math.random() * 100),
+          'Esta é uma mensagem de teste.',
+          '/image/CampoVerde.jpeg' // Endereço da imagem
+        );
+      }, 2000);
+    </script>
 </body>
 
 </html>
